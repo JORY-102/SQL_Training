@@ -1,0 +1,8 @@
+-- Add or subtract days, months, and years
+SELECT
+    SalesOrderNumber AS OrderID,
+    OrderDate,
+    DATEADD(day, -10, OrderDate) AS TenDaysBefore,
+    DATEADD(month, 3, OrderDate) AS ThreeMonthsLater,
+    DATEADD(year, 2, OrderDate) AS TwoYearsLater
+FROM dbo.FactInternetSales;
